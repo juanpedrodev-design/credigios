@@ -1,0 +1,280 @@
+:root {
+  --verde-escuro: #0f3d2e;
+  --verde-medio: #145c43;
+  --verde-claro: #1f7a5a;
+  --dourado: #f1c75b;
+  --branco: #ffffff;
+  --cinza-claro: #f5f7f6;
+  --texto-escuro: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto-escuro);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  background: var(--verde-escuro);
+  height: 90px; /* altura fixa do header */
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+}
+
+.header .container {
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+}
+
+.logo {
+  height: 150px;      /* logo maior */
+  max-height: 100%;  /* nunca ultrapassa o header */
+  object-fit: contain;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(
+      rgba(15, 61, 46, 0.9),
+      rgba(15, 61, 46, 0.9)
+    ),
+    url("assets/hero.jpg") center/cover no-repeat;
+
+  color: var(--branco);
+  padding: 110px 0;
+  text-align: center;
+}
+
+
+.hero h1 {
+  font-size: 2.7rem;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  line-height: 1.2;
+}
+
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(241, 199, 91, 0.15);
+  color: var(--dourado);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  opacity: 0.95;
+}
+
+.hero-benefits {
+  list-style: none;
+  margin-bottom: 36px;
+}
+
+.hero-benefits li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.hero-cta {
+  font-size: 1rem;
+  padding: 16px 34px;
+  border-radius: 8px;
+}
+
+
+.btn-cta {
+  display: inline-block;
+  background: var(--dourado);
+  color: var(--verde-escuro);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+/* SERVIÇOS AVANÇADOS */
+.services-advanced {
+  background: #ffffff;
+  padding: 90px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 60px;
+  color: var(--verde-escuro);
+}
+
+/* CARDS */
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.service-card-advanced {
+  background: #ffffff;
+  padding: 32px 24px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.service-card-advanced:hover {
+  transform: translateY(-6px);
+}
+
+.service-card-advanced .icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: var(--dourado);
+}
+
+.service-card-advanced h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--verde-escuro);
+}
+
+.service-card-advanced p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* VANTAGENS */
+.advantages {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.advantages-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: var(--verde-escuro);
+}
+
+.advantages-content ul {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.advantages-content li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+/* IMAGEM */
+.advantages-image {
+  width: 100%;
+  height: 360px;
+  background: #f2f2f2;
+  border-radius: 24px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .advantages {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .advantages-image {
+    height: 280px;
+  }
+}
+
+
+/* LOCALIZAÇÃO */
+.location {
+  padding: 80px 0;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.location-media img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.location-media iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer img {
+  height: 150px;
+  margin-bottom: 16px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
